@@ -102,11 +102,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Allve💻"
+  name             : "Allve 💻"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Game Programmer"
   location         : "Seoul, Republic of Korea"
-  email            : "allvegamedevelop@gmail.com"
+  # email            : "allvegamedevelop@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
