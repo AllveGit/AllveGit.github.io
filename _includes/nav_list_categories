@@ -1,0 +1,131 @@
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+  <ul class="nav__items">
+      <!--전체 글 수-->
+      <li>
+        📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style>
+      </li>
+      <li>
+          <!--Programming Language 카테고리 분류-->
+          <span class=""nav__sub-title>Programming Language</span>
+          <!--C++ 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "cpp" %}
+                    <li><a href="/categories/cpp" class="">C++ ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--C++20 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "cpp20" %}
+                    <li><a href="/categories/cpp20" class="">C++20 ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--C# 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "csharp" %}
+                    <li><a href="/categories/csharp" class="">C# ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--PYTHON 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "python" %}
+                    <li><a href="/categories/python" class="">PYTHON ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--GO 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "go" %}
+                    <li><a href="/categories/go" class="">GO ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--RUST 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "rust" %}
+                    <li><a href="/categories/rust" class="">RUST ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+
+          <!--Unity 카테고리 분류-->
+          <span class=""nav__sub-title>Unity</span>
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "unity" %}
+                    <li><a href="/categories/unity" class="">UNITY ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+
+          <!--Unreal 카테고리 분류-->
+          <span class=""nav__sub-title>Unreal</span>
+          <!--UE4 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "ue4" %}
+                    <li><a href="/categories/ue4" class="">UE4 ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--UE5 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "ue5" %}
+                    <li><a href="/categories/ue5" class="">UE5 ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+
+          <!--Projects 카테고리 분류-->
+          <span class=""nav__sub-title>Projects</span>
+          <!--FelixOnline(Unity MMORPG Project) 태그 -->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "felix-online" %}
+                    <li><a href="/categories/felix-online" class="">Felix Online ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+
+          <!--Coding Test 카테고리 분류-->
+          <span class=""nav__sub-title>Coding Test</span>
+          <!--Baekjoon(백준) 태그 -->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "baekjoon" %}
+                    <li><a href="/categories/baekjoon" class="">백준 ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--Codeup(코드업) 태그 -->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "codeup" %}
+                    <li><a href="/categories/codeup" class="">코드업 ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+          <!--Programmers(프로그래머스) 태그 -->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "programmers" %}
+                    <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+      </li>
+  </ul>
+</nav>
