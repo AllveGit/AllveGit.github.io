@@ -1,11 +1,11 @@
 ---
-title: "C++"
+title: "BAEKJOON"
 layout: archive
-permalink: categories/cpp
+permalink: categories/baekjoon
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.cpp %}
+{% assign posts = site.categories.baekjoon %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
