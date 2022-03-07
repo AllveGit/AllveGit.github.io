@@ -7,9 +7,10 @@
       <!--전체 글 수-->
       <li>
         📂 전체 글 수 {{sum}} 개
-      </li>
+      </li>   
       <li>
           <!--Programming Language 카테고리 분류-->
+          <br>
           <span class=""nav__sub-title>Programming Language</span>
           <!--C++ 태그-->
           <ul>
@@ -61,6 +62,7 @@
           </ul>
 
           <!--Unity 카테고리 분류-->
+          <br>
           <span class=""nav__sub-title>Unity</span>
           <ul>
             {% for category in site.categories %}
@@ -71,6 +73,7 @@
           </ul>
 
           <!--Unreal 카테고리 분류-->
+          <br>
           <span class=""nav__sub-title>Unreal</span>
           <!--UE4 태그-->
           <ul>
@@ -90,6 +93,7 @@
           </ul>
 
           <!--Projects 카테고리 분류-->
+          <br>
           <span class=""nav__sub-title>Projects</span>
           <!--FelixOnline(Unity MMORPG Project) 태그 -->
           <ul>
@@ -101,6 +105,7 @@
           </ul>
 
           <!--Coding Test 카테고리 분류-->
+          <br>
           <span class=""nav__sub-title>Coding Test</span>
           <!--Baekjoon(백준) 태그 -->
           <ul>
