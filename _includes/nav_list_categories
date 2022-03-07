@@ -61,9 +61,9 @@
             {% endfor %}
           </ul>
 
-          <!--Unity 카테고리 분류-->
+          <!--Tool 카테고리 분류-->
           <br>
-          <span class=""nav__sub-title>Unity</span>
+          <span class=""nav__sub-title>Tool</span>
           <ul>
             {% for category in site.categories %}
                 {% if category[0] == "unity" %}
@@ -71,10 +71,6 @@
                 {% endif %}
             {% endfor %}
           </ul>
-
-          <!--Unreal 카테고리 분류-->
-          <br>
-          <span class=""nav__sub-title>Unreal</span>
           <!--UE4 태그-->
           <ul>
             {% for category in site.categories %}
