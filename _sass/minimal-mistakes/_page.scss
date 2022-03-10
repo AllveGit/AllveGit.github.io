@@ -69,7 +69,7 @@ body {
 }
 
 .page__title {
-  font-family: $bmjua;
+  font-family: $nanum-square;
   margin-top: 0;
   line-height: 1.2;
   color: mix(#fff, $primary-color, 40%);
@@ -85,8 +85,9 @@ body {
 }
 
 .page__content {
-  font-family: $nanum-square;
   margin-top: 20px;
+  font-size: 0.5em;
+  font-family: $bmjua;
 
   h2 {
     padding-bottom: 0.5em;
@@ -99,7 +100,7 @@ body {
 			left: 0.5em;
 			opacity: 0;
 			font-size: 0.8em;
-      font-family: $bmjua;
+      font-family: $nanum-square;
 			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
 			-moz-transition: opacity 0.2s ease-in-out 0.1s;
 			-o-transition: opacity 0.2s ease-in-out 0.1s;
