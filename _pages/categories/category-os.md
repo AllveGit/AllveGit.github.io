@@ -1,11 +1,11 @@
 ---
-title: "C++20"
+title: "OS"
 layout: archive
-permalink: categories/cpp20
+permalink: categories/os
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.cpp20 %}
+{% assign posts = site.categories.os %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

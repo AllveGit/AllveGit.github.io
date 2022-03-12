@@ -9,9 +9,9 @@
         📂 전체 글 수 {{sum}} 개
       </li>   
       <li>
-          <!--Programming Language 카테고리 분류-->
+          <!--Programming 카테고리 분류-->
           <br>
-          <span class=""nav__sub-title>Programming Language</span>
+          <span class=""nav__sub-title>Programming</span>
           <!--C++ 태그-->
           <ul>
             {% for category in site.categories %}
@@ -23,8 +23,8 @@
           <!--C++20 태그-->
           <ul>
             {% for category in site.categories %}
-                {% if category[0] == "cpp20" %}
-                    <li><a href="/categories/cpp20" class="">C++20 ({{category[1].size}})</a></li>
+                {% if category[0] == "cpp-modern" %}
+                    <li><a href="/categories/cpp-modern" class="">Modern C++ ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
           </ul>
@@ -60,10 +60,18 @@
                 {% endif %}
             {% endfor %}
           </ul>
+          <!--OS 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "os" %}
+                    <li><a href="/categories/os" class="">OS ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
 
-          <!--Tool 카테고리 분류-->
+          <!--Game-Engine 카테고리 분류-->
           <br>
-          <span class=""nav__sub-title>Tool</span>
+          <span class=""nav__sub-title>Game Engine</span>
           <ul>
             {% for category in site.categories %}
                 {% if category[0] == "unity" %}
