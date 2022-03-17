@@ -20,7 +20,7 @@
                 {% endif %}
             {% endfor %}
           </ul>
-          <!--C++20 태그-->
+          <!--Modern C++ 태그-->
           <ul>
             {% for category in site.categories %}
                 {% if category[0] == "cpp-modern" %}
@@ -96,10 +96,14 @@
             {% endfor %}
           </ul>
 
+          <!--Dev-Ops 카테고리 분류-->
+          <br>
+          <span class=""nav__sub-title>Dev-Ops</span>          
+
           <!--Projects 카테고리 분류-->
           <br>
           <span class=""nav__sub-title>Projects</span>
-          <!--FelixOnline(Unity MMORPG Project) 태그 -->
+          <!--FelixOnline (Unity MMORPG Project) 태그 -->
           <ul>
             {% for category in site.categories %}
                 {% if category[0] == "felix-online" %}
@@ -135,6 +139,10 @@
                 {% endif %}
             {% endfor %}
           </ul>
+
+          <!--Finance 카테고리 분류-->
+          <br>
+          <span class=""nav__sub-title>Finance</span>
       </li>
   </ul>
 </nav>
