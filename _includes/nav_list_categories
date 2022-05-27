@@ -112,34 +112,6 @@
             {% endfor %}
           </ul>
 
-          <!--Coding Test 카테고리 분류-->
-          <br>
-          <span class=""nav__sub-title>Coding Test</span>
-          <!--Baekjoon(백준) 태그 -->
-          <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "baekjoon" %}
-                    <li><a href="/categories/baekjoon" class="">백준 ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-          <!--Codeup(코드업) 태그 -->
-          <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "codeup" %}
-                    <li><a href="/categories/codeup" class="">코드업 ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-          <!--Programmers(프로그래머스) 태그 -->
-          <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "programmers" %}
-                    <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-
           <!--Finance 카테고리 분류-->
           <br>
           <span class=""nav__sub-title>Finance</span>
