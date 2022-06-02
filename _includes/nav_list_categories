@@ -20,14 +20,6 @@
                 {% endif %}
             {% endfor %}
           </ul>
-          <!--Modern C++ 태그-->
-          <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "cpp-modern" %}
-                    <li><a href="/categories/cpp-modern" class="">Modern C++ ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
           <!--C# 태그-->
           <ul>
             {% for category in site.categories %}
