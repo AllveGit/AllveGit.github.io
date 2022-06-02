@@ -68,6 +68,14 @@
                 {% endif %}
             {% endfor %}
           </ul>
+          <!--Books 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "books" %}
+                    <li><a href="/categories/books" class="">Books ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
 
           <!--Game-Engine 카테고리 분류-->
           <br>
