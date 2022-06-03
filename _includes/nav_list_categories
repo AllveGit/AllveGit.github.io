@@ -12,6 +12,14 @@
           <!--Programming 카테고리 분류-->
           <br>
           <span class=""nav__sub-title>Programming</span>
+          <!--Books 태그-->
+          <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "books" %}
+                    <li><a href="/categories/books" class="">Books ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
           <!--C++ 태그-->
           <ul>
             {% for category in site.categories %}
@@ -57,14 +65,6 @@
             {% for category in site.categories %}
                 {% if category[0] == "os" %}
                     <li><a href="/categories/os" class="">OS ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-          <!--Books 태그-->
-          <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "books" %}
-                    <li><a href="/categories/books" class="">Books ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
           </ul>
