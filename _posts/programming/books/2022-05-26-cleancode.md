@@ -4,7 +4,7 @@ title:  "[Books] 클린 코드 (Clean Code)"
 categories:
   - books
 tags:
-  - [clean-code]
+  - [code-refactoring]
 
 toc: true
 toc_sticky: true
