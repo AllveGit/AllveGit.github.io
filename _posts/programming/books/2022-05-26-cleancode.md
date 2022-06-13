@@ -4,7 +4,7 @@ title:  "[Books] 클린 코드 (Clean Code)"
 categories:
   - books
 tags:
-  - [code-refactoring]
+  - [clean-code]
 
 toc: true
 toc_sticky: true
@@ -218,3 +218,87 @@ Complex goodFulcrumPoint = Complex.FromRealNumber(23.0);    // 2
 이럴 때는 똑같은 단어를 사용하는 것이 아닌 insert, append등으로 대체하여 사용해야 합니다.  
 
 # 🚀 함수
+
+> 코딩을 하면서 가장 많이 접하게 되는 것은 함수일 것입니다. 그만큼 코드의 기본 단위라고 할 수 있습니다.
+
+함수를 잘 짜는 법을 알 수 있다면 클린 코드에 가까워질 수 있다고 장담할 수 있습니다.  
+  
+## 🔥 작게 만들어라  
+  
+<u>함수는 긴 것보다는 작은 것이 훨씬 좋습니다.</u>  
+함수가 길다면, 그 함수는 이해하기 어려울 확률이 매우 높고, 함수는 한 가지 일만 해야된다는 SRP 원칙도 위배할 확률이 높습니다.  
+그렇기에 긴 함수보다는 작은 함수가 훨씬 낫습니다.  
+  
+들여쓰기 수준이 1단 ~ 2단으로 유지되는 것이 가독성에 좋습니다.
+  
+## 🔥 한 가지만 해라 (SRP)  
+
+```java
+public static String renderPlayerInfo(Creature inCreature) {
+  boolean isPlayer = inCreature.hasAttribute("Player");
+  boolean isExistCreature = Creatures.Find(inCreature.id);
+
+  if (isPlayer && isExistCreature)
+  {
+    if (inCreature.getHP() > 0)
+    {
+      inCreature.Kill();
+      System.out.println("Player Dead!");
+    }
+    else
+    {
+      System.out.println("Player Alive!");
+    }
+
+    ....
+  }
+  else
+  {
+    return "";
+  }
+}
+```  
+  
+위 함수는 총체적 난국의 함수입니다. 함수 이름은 renderPlayerInfo입니다.  
+함수 이름만 보면 플레이어의 정보를 출력해주는 함수이라고 판단할 수 있습니다.  
+하지만, 실제로는 이 크리처가 플레이어인지 확인, 이 크리처가 존재하는 크리처인지 확인, 크리처의 HP가 0이하면 죽는 함수까지 호출합니다.  
+함수 이름에 맞지 않는 행동들까지 하며, 심지어는 출력 함수에서 크리처의 상태까지 바꿔버립니다. 
+  
+이 함수는 이렇게 개선할 수 있습니다.
+
+```java
+public static String renderPlayerInfo(Creature inCreature) {
+  if (!isPlayer(inCreature) || !isExist(inCreature))
+  {
+    return "";
+  }
+
+  if (inCreature.isDead())
+  {
+    System.out.println("Player Dead!");
+  }
+  else
+  {
+    System.out.println("Player Alive!");
+  }
+
+  ....
+}
+```  
+  
+한눈에 봐도 간단해졌으며, 가독성이 좋아진 것이 느껴집니다.  
+함수 이름과 다른 행동들이 함수로 빠졌으므로 이 함수는 플레이어의 정보를 출력해주는 한 가지의 일만 하는 함수로 바뀌었습니다.  
+  
+## 🔥 switch문
+
+## 🔥 서술적인 이름을 사용하라
+
+## 🔥 함수 인수
+
+## 🔥 명령과 조회를 분리하라
+
+## 🔥 오류코드보다 예외를 사용하라
+
+## 🔥 함수를 짜는 방식  
+  
+# 🚀 주석
