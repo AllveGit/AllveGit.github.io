@@ -1,43 +1,65 @@
 ---
-layout: compress
+layout: default
 ---
+<div class="col-lg-12">
+ <div class="row justify-content-center">
+      <div class="col-lg-8">
+              <ul>
+                  <div class="row">
+                      {% for post in paginator.posts %}
+                      <div class="card blog-post">
+                          <img class="card-img-top" src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}" alt="{{ post.title }}">
+                          <div class="card-body center">
+                              <!-- <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="author-profile-img"> -->
+                              <h4 class="card-title">{{ post.title }}</h4>
 
-<!DOCTYPE html>
-<html>
+                              <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%b %-d, %Y" }}</h6>
+                              <p class="card-text">{{ post.summary }} </p>
 
-{% include head.html %}
+                              <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}" class="btn btn-dark btn-lg">Read</a>
+                              <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span>
 
-<body>
-    {% include navbar.html %}
+                          </div>
+                      </div>
+                      {% endfor %}
+                  </div>
+              </ul>
 
-    <section class="hero is-fullheight" id="blog">
-        <div class="hero-body">
-            <div class="container">
-                {% include blogpage-heading.html %}
-            </div>
-        </div>
-        <div id="results-container"></div>
-        <!--Blog Cards Section-->
-        {% for post in site.posts %}
-            {% include blog-card.html %}
-        {% endfor %}
-        </div>
-    </section>
-    <br>
-    <!--Footer begins here-->
-    {% include footer.html %}
-    <script src="{{site.url}}{{site.baseurl}}/assets/js/simple-jekyll-search.js"></script>
+        <div class="row center">
+          <!-- Pagination links -->
+          {% if paginator.total_pages > 1 %}
+            <ul class="pagination pagination-sm">
+              {% if paginator.previous_page %}
+                <li class="pagination-link"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+              {% else %}
+                <li class="pagination-link disabled"><span aria-hidden="true">&laquo;</span></li>
+              {% endif %}
 
-    <script>
-        SimpleJekyllSearch({
-            searchInput: document.getElementById('search'),
-            resultsContainer: document.getElementById('results-container'),
-            json: '{{site.url}}{{site.baseurl}}/search.json',
-            searchResultTemplate: '<div style="border: 0.15rem dashed black" class="searchResult columns has-text-centered" id="blog-card"><div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet"><div class="image is-16by9" style="background-image: url({image});"></div></div><a href="{url}"><div class="column has-text-left-desktop has-text-left-tablet"><h1 class="title is-size-4-touch">{title}</h1><div class="content has-text-grey">{content}<hr class="has-background-grey"><span class="has-text-grey">Published on <span class="has-text-weight-semibold">{date}</span></span> | <i class="fas fa-clock"></i> <span class="has-text-weight-semibold">{readtime} min</span> read</div></div></a></div>',
-            noResultsText: '<div class="subtitle has-text-centered is-uppercase">No Results Found</div><hr class="has-background-black" style="margin: 0.5rem 5rem 2.5rem 5rem">',
-            fuzzy: true,
-        });
-    </script>
-</body>
+              <li class="pagination-link" ><a href="/blog">First</a></li>
 
-</html>
+              {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+             <li class="disabled pagination-link"><span><b>{{ page }}</b></span></li>
+                {% elsif page == 1 %}
+                  <li class="pagination-link"><a href="/blog">{{ page }}</a></li>
+                {% else %}
+                  <li class="pagination-link"><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                {% endif %}
+              {% endfor %}
+
+              <li class="pagination-link"><a href="/blog/page/{{ paginator.total_pages }}/#/">Last</a></li>
+
+              {% if paginator.next_page %}
+                <li class="pagination-link"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+              {% else %}
+                <li class="disabled pagination-link"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {% endif %}
+      </div>
+
+    </div>
+    {%- include blog_sidebar.html -%}
+
+ </div>
+</div>
