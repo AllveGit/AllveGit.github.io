@@ -2,6 +2,7 @@ title: Allve 기술 블로그
 subtitle: The journey to become a senior programmer
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
+titlebar: Allve's Tech Blog
 
 url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -12,43 +13,40 @@ urls:
       url: /blog
     - text: Resume
       url: /about
-    - text: Shop
-      url : /shop
 
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: profile.png
-author: John Doe
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
-author_email: "mail@sujaykundu.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
-hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
+author_logo: authors/profile.jpg
+author: Allve
+author_bio: 게임 개발자 이승재입니다.<br>온라인에서는 Allve라는 닉네임으로 활동중입니다.
+author_email: "allvegamedevelop@gmail.com"
+author_location: Republic of Korea
+author_website_url: "https://github.com/AllveGit"
+hero_cover_img: hero_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
-              visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
+            # - company_name: Netmarble
+            #   company_logo: companies/netmarble.png
+            #   company_url: https://www.netmarble.net
+            #   designation: Client Programmer
+            #   description: 프로젝트WE 참여
+            #   visibility: true
+            - company_name: Factorial Games
+              company_logo: companies/factorialgames.png
+              company_url: https://factorialgames.com
+              designation: Client Programmer
+              description: 슈퍼스트링, 프로젝트N 참여
               visibility: true
 
 # Education
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: educations/knou.png
+                college_name: Korea National Open University
+                college_url: https://www.knou.ac.kr
+                college_degree: Computer Science
+                description: 컴퓨터 공학사
                 visibility: true
 
 # Projects
@@ -66,11 +64,11 @@ author_project_details:
 
 # social links
 twitter_username: johndoe
-github_username:  sujaykundu777
+github_username:  AllveGit
 facebook_username: johndoe
 linkedin_username: johndoe
 behance_username: johndoe
-instagram_username: johndoe
+instagram_username: allve_dev
 medium_username: johndoe
 telegram_username: johndoe
 dribbble_username: johndoe
@@ -82,7 +80,7 @@ flickr_username: johndoe
 hyvor_talk_website_id: 476
 
 # wakatime username (coding activity)
-wakatime_username: sujaykundu777
+wakatime_username: Allve
 
 # mailchimp embedded form url (newsletter):
 mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
@@ -103,7 +101,7 @@ permalink: pretty
 # Choose what to show ( can be true or false)
 show_author_work_experiences: true
 show_author_education_details: true
-show_author_project_details: true
+show_author_project_details: false
 
 # pagination of posts
 paginate: 4

@@ -13,21 +13,24 @@
   margin-top: 50px;
 }
 
-.jumbotron-heading, .lead {
+.jumbotron-heading {
   color: #fff;
+  margin-top: 100px;
+}
+
+.lead {
+  color: #fff;
+  margin-bottom: 200px;
 }
 </style>
 
 <!-- home hero section -->
 <div class="jumbotron">
-  <img class="author-profile-img" src="{{site.url}}{{site.baseurl}}/assets/img/{{site.author_logo}}" />
-  <p class="jumbotron-heading">Hi, I am {{site.author}} !</p>
+  <!-- <img class="author-profile-img" src="{{site.url}}{{site.baseurl}}/assets/img/{{site.author_logo}}" /> -->
+  <p class="jumbotron-heading">{{site.title}}</p>
 
   <p class="lead" id="typewriteText"></p>
-  <span>
-    {%- include github_star_button.html -%}
-    {%- include github_fork_button.html -%}
-  </span>
+  
   <!-- uncomment/modify buttons as you want-->
   <div class="jumbotron-btns">
     <a href="{{site.url}}{{site.baseurl}}/get-started">
