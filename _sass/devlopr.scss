@@ -6,8 +6,16 @@ $nav-typeface: "Gill sans";
 $mono-typeface: Menlo, Monaco, monospace;
 $text-width: 650px;
 
+/* fonts */
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 html[data-theme="dark"] {
-    --bold-color: rgb(188, 188, 188);
+    --bold-color: rgb(255, 255, 255);
     --box-background-color: hsl(0, 0%, 20%);
     --highlight-color: hsl(0, 0%, 60%);
     --light-border-color: hsl(0, 0%, 30%);
@@ -128,7 +136,7 @@ ol, ul {
 body {
     background-color: var(--main-background-color) !important;
     color: var(--main-text-color) !important;
-    font-family: 'Quicksand', sans-serif !important;
+    font-family: 'LINESeedKR-Bd', sans-serif !important;
     font-feature-settings: "kern"on;
     font-size: 1.4rem;
     font-variant-numeric: oldstyle-nums;
@@ -201,6 +209,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
+hr {
+  background-color: var(--light-text-color) !important;
+}
+
 a{
     color: var(--link-color) !important;
 }
@@ -217,7 +229,7 @@ header {
 /* bootstrap override */
 .container-fluid {
     padding: 0px !important;
-    width: fit-content !important;
+    width: 100% !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
     margin-top: 10px !important;
@@ -628,7 +640,7 @@ header {
 #article-container{
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 50fr 4fr;
+    grid-template-columns: 1fr;
 }
 
 #recent-articles,#recent-projects{
@@ -636,9 +648,20 @@ header {
 }
 
 #recent-articles-header{
-    display: grid;
+    // display: grid;
     width: 100%;
-    grid-template-columns: 17fr 2fr;
+    // grid-template-columns: 17fr 2fr;
+}
+
+#recent-articles-title{
+    margin-left: 30px !important;
+    padding-left: 5px;
+}
+
+#recent-articles-layout{
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
 }
 
 #article-img, #article-link, #article-alert {
