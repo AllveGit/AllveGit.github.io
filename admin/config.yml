@@ -8,8 +8,8 @@ media_folder: "assets/img/posts" # Media files will be stored in the repo under 
 public_folder: "/assets/img/posts" # The src attribute for uploaded media will begin with /images/uploads
 publish_mode: editorial_workflow # To manage status (Edit, Draft, Publish)
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
     folder: "_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -31,7 +31,7 @@ collections:
     create: true
     slug: ".md"
     fields:
-      - {label: "Layout", name: "layout", widget: "select", options: ["about", "blog", "contact", "gallery", "page", "product"]}
+      - {label: "Layout", name: "layout", widget: "select", options: ["resume", "posts", "contact", "gallery", "page", "product"]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Permalink", name: "permalink", widget: "hidden", default: "//"}
       - {label: "Body", name: "body", widget: "markdown", required: false}

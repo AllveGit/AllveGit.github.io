@@ -1,5 +1,5 @@
 ---
-title: About
-layout: about-me
-permalink: /about/
+title: Resume
+layout: resume
+permalink: /resume/
 ---

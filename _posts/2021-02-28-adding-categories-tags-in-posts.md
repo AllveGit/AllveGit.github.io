@@ -9,7 +9,7 @@ tags: jekyll
 thumbnail: /assets/img/posts/code.jpg
 keywords: devlopr jekyll, how to use devlopr, devlopr, how to use devlopr-jekyll, devlopr-jekyll tutorial,best jekyll themes, multi categories and tags
 usemathjax: false
-permalink: /blog/adding-categories-tags-in-posts/
+permalink: /posts/adding-categories-tags-in-posts/
 ---
 
 ## Adding Multiple Categories in Posts
@@ -32,7 +32,7 @@ Then to render this category using link and pages. All we need to do is,
 ---
 layout: page
 title: Guides
-permalink: /blog/categories/your_category_name/
+permalink: /posts/categories/your_category_name/
 ---
 
 <h5> Posts by Category : {{ page.title }} </h5>
@@ -45,4 +45,4 @@ permalink: /blog/categories/your_category_name/
 ```
 
 Using the category, all the posts associated with the category will be listed on
-`http://localhost:4000/blog/categories/your_category_name`
+`http://localhost:4000/posts/categories/your_category_name`
