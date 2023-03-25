@@ -10,7 +10,6 @@
     </div>
     <br>
     <ul>
-      <hr>
       {% for post in site.posts limit:5 %}
       <li class="article-card">
         <a href="{{post.url}}" class="article-card-link">
@@ -29,11 +28,13 @@
               {% endif %}
             </div> -->
             <div id="article-link">
-                <p class="recent-article-link">{{post.title}}</p>
-                <div style="color:gray; font-size: 18px;">
+                <div class="recent-article-link">
+                  <p>{{post.title}}</p>
+                </div>
+                <div class="recent-article-summary">
                   <p>{{post.summary}}</p>
                 </div>
-                <span style="color: #ccc; font-size: 15px;"> 
+                <span style="color: gray; font-size: 15px;"> 
                   - <i><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></i>
                 </span>
             </div>
@@ -48,6 +49,7 @@
       <hr>
       {% endfor %}
     </ul>
+    <br>
     <div id="recent-articles-show-all" style="text-align:center">
       <a class="btn btn-lg btn-dark" href="/blog">   전체 포스트 보기   </a>
     </div>

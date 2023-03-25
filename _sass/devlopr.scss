@@ -19,30 +19,32 @@ html[data-theme="dark"] {
     --box-background-color: hsl(0, 0%, 20%);
     --highlight-color: hsl(0, 0%, 60%);
     --light-border-color: hsl(0, 0%, 30%);
-    --light-text-color: rgb(199, 199, 204);
+    --light-text-color: rgb(170, 170, 170);
     --link-color: #f69801;
     --link-color-visited: hsl(250, 100%, 60%);
-    --main-background-color: rgb(28, 28, 30);
-    --main-text-color: rgb(139, 139, 139);
+    --main-background-color: #212529;
+    --main-text-color: #ffffff;
     --medium-text-color: hsl(0, 0%, 70%);
     --underline-color: hsl(0, 0%, 50%);
     --social-link-color: #ffffff;
     --card-background-color: rgb(32, 32, 34);
     --newsletter-background-color: #222324;
     --button-background-color: #111;
+    --hover-color: #303030;
+    --footer-color: #19181b;
 }
 
 html,
 html[data-theme="light"] {
-    --bold-color: rgb(0, 0, 0);
+    --bold-color: #424242;
     --box-background-color: rgb(249, 249, 250);
     --highlight-color: hsl(0, 0%, 80%);
     --light-border-color: rgb(230, 230, 230);
     --light-text-color: rgb(72, 72, 74);
     --link-color: rgb(0, 112, 201);
     --link-color-visited: hsl(250, 100%, 37%);
-    --main-background-color: rgb(255, 255, 255);
-    --main-text-color: rgb(51, 51, 51);
+    --main-background-color: #ffffff;
+    --main-text-color: #424242;
     --medium-text-color: hsl(0, 40%, 2%);
     --sidebar-color: hsl(0, 0%, 90%);
     --underline-color: hsl(0, 0%, 60%);
@@ -50,6 +52,8 @@ html[data-theme="light"] {
     --card-background-color: rgb(250, 250, 250);
     --newsletter-background-color: #00000008;
     --button-background-color: #fff;
+    --hover-color: #cfcfcf;
+    --footer-color: #efefef;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -204,9 +208,14 @@ blockquote {
     background: #333;
   }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   color: var(--bold-color) !important;
   line-height: 1.1;
+}
+
+h5, h6 {
+    color: var(--light-text-color) !important;
+    line-height: 1.1;
 }
 
 hr {
@@ -238,6 +247,12 @@ header {
     margin: 20px !important;
     padding: 20px !important;
     background-color: var(--card-background-color) !important;
+}
+.home-profile {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--main-background-color) !important; 
 }
 
 #topNav{
@@ -662,6 +677,7 @@ header {
     width: 30%;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 60px;
 }
 
 #article-img, #article-link, #article-alert {
@@ -670,9 +686,25 @@ header {
     margin: 5px;
 }
 .recent-article-link{
+    color: var(--bold-color) !important;
     font-size: 20px;
     text-decoration: none;
 }
+// .recent-article-link :hover{
+//     color: var(--hover-color) !important;
+//     font-size: 20px;
+//     text-decoration: none;
+// }
+.recent-article-summary{
+    color: var(--light-text-color) !important;
+    font-size: 18px;
+    text-decoration: none;
+}
+// .recent-article-summary :hover{
+//     color: var(--hover-color) !important;
+//     font-size: 20px;
+//     text-decoration: none;
+// }
 .article-card-link, .article-card-link:hover{
     text-decoration: none;
     color: orange !important;
@@ -682,8 +714,8 @@ header {
 }
 .article-card a :hover{
     text-decoration: none;
-    background: #303030!important;
-    border-color: #303030;
+    background: var(--hover-color) !important;
+    border-color: var(--hover-color);
     background: transparent;
 }
 
@@ -802,11 +834,11 @@ header {
 
 footer {
     width: 100%;
-    height: 70px;
-    text-align: center;
-    padding: 20px;
-    background-color: var(--main-background-color);
+    height: 200px;
+    padding: 2rem 1rem;
+    background: var(--footer-color);
     color: var(--main-text-color);
+    text-align: center;
 }
 
 
