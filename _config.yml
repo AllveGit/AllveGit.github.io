@@ -27,17 +27,17 @@ hero_cover_img: hero_cover.jpg # replace this for changing homepage cover (eg. t
 
 # Experiences
 author_work_experiences:
-            # - company_name: Netmarble
+            # - company_name: Netmarble Nexus
             #   company_logo: companies/netmarble.png
             #   company_url: https://www.netmarble.net
             #   designation: Client Programmer
-            #   description: 프로젝트WE 참여
+            #   description: 프로젝트WE 개발
             #   visibility: true
             - company_name: Factorial Games
               company_logo: companies/factorialgames.png
               company_url: https://factorialgames.com
               designation: Client Programmer
-              description: 슈퍼스트링, 프로젝트N 참여
+              description: 슈퍼스트링 개발 & 라이브 <br> 프로젝트 N 개발
               visibility: true
 
 # Education
