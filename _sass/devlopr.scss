@@ -40,7 +40,7 @@ html[data-theme="light"] {
     --box-background-color: rgb(249, 249, 250);
     --highlight-color: hsl(0, 0%, 80%);
     --light-border-color: rgb(230, 230, 230);
-    --light-text-color: rgb(72, 72, 74);
+    --light-text-color: rgb(110, 110, 110);
     --link-color: rgb(0, 112, 201);
     --link-color-visited: hsl(250, 100%, 37%);
     --main-background-color: #ffffff;
@@ -239,6 +239,9 @@ header {
 .container-fluid {
     padding: 0px !important;
     width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    padding-bottom: 200px !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
     margin-top: 10px !important;
@@ -551,7 +554,8 @@ header {
     padding-left: 0;
     list-style: none;
     border-radius: .25rem;
-    margin-left: 20px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .jumbotron-heading{
@@ -835,6 +839,8 @@ header {
 footer {
     width: 100%;
     height: 200px;
+    position: relative;
+    transform: translateY(-100%);
     padding: 2rem 1rem;
     background: var(--footer-color);
     color: var(--main-text-color);
@@ -848,9 +854,12 @@ footer {
 
 @media screen and (min-width: 768px) {
     .main-container{
+        width: 70%;
+        height: auto;
+        min-height: 100%;
+        padding-bottom: 200px;
         margin-left: auto;
         margin-right: auto;
-        width: 70%;
     }
 }
 
