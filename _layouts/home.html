@@ -1,19 +1,138 @@
 ---
-layout: full-width
+layout: default
 ---
 
-<script>
-  $(document).ready(function() {
-    $("#typewriteText").typewrite({
-      actions: [{ type: "{{site.subtitle}}" }]
-    });
-  });
-</script>
-    <!-- hero section-->
-    {%- include hero.html -%}
-    <div>
-      {%- include profile.html -%}
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{ site.title }}</h1>
+            {% if site.description %}
+            <span class="subheading">{{ site.description }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      {%- include recent_articles.html -%}
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {{ content }}
+
+        <!-- Profile -->
+        <div style = "text-align: center;">
+          <img class="profile-img" src="/img/author.jpg" alt="{{site.author}}" />
+          <h4 class="profile-name">{{site.profile_name}}</h4>
+          <p class="profile-introduce">{{site.profile_introduce}}</p>
+          <p class="profile-bio">{{site.profile_bio}}</p>
+          <ul class="list-inline text-center">
+            {% if site.github_username %}
+            <li class="list-inline-item">
+              <a href="https://github.com/{{ site.github_username }}">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.linkedin_username %}
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.facebook_username %}
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.instagram_username %}
+            <li class="list-inline-item">
+              <a href="https://instagram.com/{{ site.instagram_username }}">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.twitter_username %}
+            <li class="list-inline-item">
+              <a href="https://twitter.com/{{ site.twitter_username }}">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.email %}
+            <li class="list-inline-item">
+              <a href="mailto:{{ site.email | encode_email }}">
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+        
+        <hr>
+
+        <!-- Home Post List -->
+        {% for post in site.posts limit : 5 %}
+
+        <article class="post-preview">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            {% if post.subtitle %}
+            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            {% else %}
+            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {% endif %}
+          </a>
+          <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+        </article>
+
+        <hr>
+
+        {% endfor %}
+
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+        </div>
+
+      </div>
     </div>
+  </div>

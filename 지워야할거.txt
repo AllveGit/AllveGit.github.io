@@ -1,4 +1,0 @@
-admin 폴더
-shipcart 관련
-shop 관련
-bower.json

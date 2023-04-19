@@ -1,311 +1,154 @@
-### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
+
+[Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
+
+This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
+
+## Preview
+
+[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)
+
+**[View Live Preview](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)**
+
+## Installation & Setup
+
+### Using RubyGems
+
+When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
+
+1. (Optional) Create a new Jekyll site: `jekyll new my-site`
+2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
+3. Install the theme (run the command inside your site directory): `bundle install`
+4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
+5. Build your site: `bundle exec jekyll serve`
+
+Assuming there are no errors and the site is building properly, follow these steps next:
+
+1. Create the following pages if they do not exist already (or change the extension of existing markdown files from `.md` to `.html`):
+
+   * `index.html` - set to `layout: home`
+   * `about.html` - set to `layout: page`
+   * `contact.html` - set to `layout: page`
+   * `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
+
+2. Configure the `index.html` front matter. Example:
+
+    ```markdown
+    ---
+    layout: home
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
+
+3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
+
+    ```markdown
+    ---
+    layout: page
+    title: Page Title
+    description: This is the page description.
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
+
+4. For each post in the `_posts` directory, update the front matter. Example:
+
+    ```markdown
+    ---
+    layout: post
+    title: "Post Title"
+    subtitle: "This is the post subtitle."
+    date: YYYY-MM-DD HH:MM:SS
+    background: '/PATH_TO_IMAGE'
+    ---
+    ```
+
+    For reference, look at the [demo repository](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
+
+5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
+
+    ```html
+    <form name="sentMessage" id="contactForm" novalidate>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Name</label>
+          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Email Address</label>
+          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+          <label>Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <label>Message</label>
+          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+      </div>
+      <br>
+      <div id="success"></div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+      </div>
+    </form>
+    ```
 
-[![Gem Version](https://badge.fury.io/rb/devlopr.svg)](https://badge.fury.io/rb/devlopr)
-![workflow-badge](https://github.com/sujaykundu777/devlopr-jekyll/actions/workflows/deploy.yml/badge.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4232ac2b-63e0-4c78-92e0-e95aad5ab8c3/deploy-status)](https://app.netlify.com/sites/devlopr/deploys)
-![](https://ruby-gem-downloads-badge.herokuapp.com/devlopr?type=total&color=brightgreen&style=plastic)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![Bakers](https://opencollective.com/devlopr-jekyll/tiers/badge.svg)](https://opencollective.com/devlopr-jekyll/)
+    Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
 
+6. Build your site: `bundle exec jekyll serve`
 
-You can use Devlopr as a starter for building your own Site. we purposely keep the styling minimal and bare to make it easier to add your own flare and markup. (Under Active Development) !
+### Using Core Files
 
-Highly Customizable and No Hosting or Maintainence Cost is required !
+When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
 
-![devlopr jekyll](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/screenshot.PNG?raw=true)
+1. [Download](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
+2. Update the following configuration settings in your `_config.yml` file:
 
-devlopr uses Markdown Files to generate data like Blog Posts, Gallery, Shop Products etc. No external database is required.
+    * `baseurl`
+    * `url`
+    * `title`
+    * `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
+    * `description`
+    * `author`
+    * `twitter_username` (Optional)
+    * `facebook_username` (Optional)
+    * `github_username` (Optional)
+    * `linkedin_username` (Optional)
+    * `instagram_username` (Optional)
 
+3. Build your site: `bundle exec jekyll serve`
 
-### Launch your Static Site using Devlopr in minutes :rocket:
+## Bugs and Issues
 
-To get started follow this [Tutorial](https://devlopr.netlify.app/get-started)
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
 
-or if you want to try fast :
+## About
 
-### Follow this steps in browser (takes 5-10 mins): 
-1. Fork this Repo with your name as  your_username.github.io
-2. Visit your Fork repo at https://github.com/your_username/your_username.github.io
-3. Press "." in keyboard (this will open up vs-code editor in browser) of the repo.
-4. Customize config.yml file according to your needs (eg. change your Name, Email... etc.)
-5. Commit your changes, and push 
-6. Wait for CI/CD to build your website. Visit Github Actions to see the build process.
-7. Once Ready, Your website will be ready at https://your_username.github.io :sparkles: 
-8. Happy Hacking your new site ! For Local changes you can clone locally.
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
+* <https://startbootstrap.com>
+* <https://twitter.com/SBootstrap>
 
-## Local Development Steps :
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
 
-### Clone Locally:
+* <http://davidmiller.io>
+* <https://twitter.com/davidmillerhere>
+* <https://github.com/davidtmiller>
 
-```s
-$ git clone https://github.com/your_github_username/your_github_username.github.io.git
-$ cd your_github_username
-```
-### For Linux : (Ubuntu 20.04)
+Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-To work locally with ubuntu, follow this commands.
+## Copyright and License
 
-Install Ruby :
-```s
-$ sudo apt install ruby-full
-$ ruby --version
-ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
-
-$ gem install jekyll bundler
-$ bundle update
-$ bundle install
-$ bundle exec jekyll -v
-jekyll 4.2.2
-
-$ bundle exec jekyll serve --livereload
-```
-
-### For Windows :
-
-To work locally with windows machine, follow this commands. You might need to download and install [ruby (with devkit)](https://www.ruby-lang.org/en/downloads/) and [git](https://git-scm.com/downloads).
-
-```s
-$ ruby -v 
-(ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [universal.x86_64-darwin21])
-
-$ gem install jekyll bundler
-
-$ bundler -v
-Bundler version 2.3.23
-
-$ bundle update
-$ bundle install
-$ bundle exec jekyll -v 
-jekyll 4.2.2
-
-$ bundle exec jekyll serve --livereload
-```
-
-If you are running into permission issues running bundler, try the following:
-
-```s
-$ sudo rm -rf _site
-$ bundle update
-$ bundle install
-$ bundle exec jekyll serve
-```
-Start the server locally at http://127.0.0.1:4000/ or http://localhost:4000/
-
-### For MacOS :
-Run the following in your terminal :
-
-1. Install Homebrew
-
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-
-2. Install churby and ruby-install with Homebrew
-
-`brew install chruby ruby-install`
-
-3. Install latest ruby version 
-
-`ruby-install ruby`
-
-4. This will take a few minutes, and once it’s done, configure your shell to automatically use chruby:
-
-```sh
-echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
-echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
-echo "chruby ruby-3.1.2" >> ~/.zshrc
-```
-If you’re using Bash, replace *.zshrc* with *.bash_profile*.
-
-Quit and relaunch Terminal, then check that everything is working:
-
-`$ ruby -v`
-ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-darwin21]
-
-5. Install latest gems
-
-```s
-$ gem install jekyll bundler
-
-$ bundler -v
-Bundler version 2.3.23
-
-$ bundle update
-
-$ bundle exec jekyll -v 
-jekyll 4.2.2
-
-$ bundle exec jekyll serve --livereload
-```
-
-
-### Security 
-
-We use codeQL and dependabot alerts for vulnerabality analysis & fixes.
-
-```s
-$ bundle audit
-```
-
-### Deploy your devlopr-jekyll blog - One Click Deploy
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sujaykundu777/devlopr-jekyll)
-
-### Github Actions
-
-This Project has actions to auto deploy jekyll to github pages and firebase. The deployment target can be set by editing the `DEPLOY_STRATEGY` file. Valid values are:
-- `none`: default value. use this if you don't want to deploy the site.
-- `gh-pages`: deploys to github pages. This uses a custom action available in the Marketplace - [Jekyll Deploy Action](https://github.com/marketplace/actions/deploy-jekyll-site)
-- `firebase`: deploys to firebase. Before you can use this you need to first create a firebase project [here](https://console.firebase.google.com/). You can signup for a Free Spark Plan. Then, in your github repo's settings, go to the secrets section and add the following:
-  * `FIREBASE_TOKEN`: your firebase token. you can get this by running `firebase login:ci` with the firebase cli.
-  * `FIREBASE_PROJECT_ID`: the project id of the project you just created
-
-### Demo (Hosted Apps)
-
-- Github Pages Demo - [here](https://sanketkundu.github.io/)
-- Firebase Demo - [here](https://devlopr.web.app)
-- Netlify Demo - [here](https://devlopr.netlify.com)
-- Vercel Demo - [here](https://devlopr-jekyll.vercel.app/#/)
-- Heroku Demo - [here](https://devlopr-jekyll.herokuapp.com)
-- AWS Amplify Demo - [here](https://master.d3t30wwddt6jju.amplifyapp.com/)
-
-#### Features :
-
-- Local CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
-- Headless CMS Admin Support using [Netlify CMS](https://sujaykundu.com/blog/how-to-setup-netlify-cms-with-github-pages-hosted-jekyll-blog/)
-- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
-- Stylesheet built using Sass
-- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
-- SEO-optimized
-- Real Time Search - [Algolia](https://sujaykundu.com/blog/adding-real-time-search-to-jekyll-site-using-algolia/)
-- Sell Stuff (Ecommerce) in your Blog using [Snipcart](https://snipcart.com/)
-- Send Newsletters using [Mailchimp](https://mailchimp.com/)
-- Contact Forms Support for [Getform](https://getform.io), [Formspree](https://formspree.io/)
-- Coding Activity using [Wakatime](https://wakatime.com/)
-- Hosting Support for [Github Pages](https://pages.github.com), [Netlify](https://netlify.com), [Vercel](https://vercel.com), [Heroku](https://heroku.com), [AWS Amplify](aws.amplify.com), [Firebase](https://firebase.com)
-- CI/CD Support using [Travis CI](https://sujaykundu.com/blog/deploy-jekyll-blog-using-github-pages-and-travis-ci/)
-
-#### Jekyll Admin
-You can easily manage the site locally using the Jekyll admin : [http://localhost:4000/admin](http://localhost:4000/admin)
-
-![Jekyll Admin](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/jekyll-admin.PNG?raw=true)
-
-
-You can check out for all changelogs [here](https://devlopr.olvy.co/)
-
-## Pull the latest changes
-
-```s
-git remote -v
-git remote add upstream https://github.com/sujaykundu777/devlopr-jekyll.git
-git fetch upstream
-git checkout master
-git merge upstream/master
-git push
-```
-
-## Using Docker :
-
-Building the Image :
-
-`docker build -t my-devlopr-jekyll-blog .`
-
-Running the container :
-
-`docker run -d -p 4000:4000 -it --volume="$PWD:/srv/jekyll" --name "my_blog" my-devlopr-jekyll-blog:latest jekyll serve --watch`
-
-## Using Docker Compose :
-
-### Development :
-
-You can run the app in development mode : (your changes will be reflected --watch moded)
-
-Serve the site at http://localhost:4000 :
-
-`docker-compose -f docker-compose-dev.yml up --build --remove-orphans`
-
-### Production :
-
-You can run the app in production mode : (your changes will be reflected --watch moded)
-
-Serve the site at http://localhost:4000 :
-
-`docker-compose -f docker-compose-prod.yml up --build --remove-orphans`
-
-Stop the app :
-`docker-compose -f docker-compose-prod.yml down`
-Once everything is good and ready to go live -
-
-`docker-compose -f docker-compose-prod.yml up --build --detach`
-
-## Contributors:
-
-This project exists thanks to all the people who contribute.
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://sujaykundu.com"><img src="https://avatars.githubusercontent.com/u/10703200?v=4?s=100" width="100px;" alt="Sujay Kundu"/><br /><sub><b>Sujay Kundu</b></sub></a><br /><a href="#infra-sujaykundu777" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#design-sujaykundu777" title="Design">🎨</a> <a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=sujaykundu777" title="Code">💻</a></td>
-      <td align="center"><a href="https://rmrt1n.github.io/"><img src="https://avatars.githubusercontent.com/u/51780559?v=4?s=100" width="100px;" alt="Ryan Martin"/><br /><sub><b>Ryan Martin</b></sub></a><br /><a href="#infra-rmrt1n" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
-      <td align="center"><a href="http://don't have one"><img src="https://avatars.githubusercontent.com/u/6252713?v=4?s=100" width="100px;" alt="Jack Wu"/><br /><sub><b>Jack Wu</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/issues?q=author%3Ajackneer" title="Bug reports">🐛</a></td>
-      <td align="center"><a href="https://github.com/russdreamer"><img src="https://avatars.githubusercontent.com/u/10559538?v=4?s=100" width="100px;" alt="Iga Kovtun"/><br /><sub><b>Iga Kovtun</b></sub></a><br /><a href="#design-russdreamer" title="Design">🎨</a> <a href="https://github.com/sujaykundu777/devlopr-jekyll/issues?q=author%3Arussdreamer" title="Bug reports">🐛</a></td>
-      <td align="center"><a href="https://csvance.github.io"><img src="https://avatars.githubusercontent.com/u/6805096?v=4?s=100" width="100px;" alt="Carroll Vance"/><br /><sub><b>Carroll Vance</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/issues?q=author%3Acsvance" title="Bug reports">🐛</a></td>
-      <td align="center"><a href="https://tzeny.com"><img src="https://avatars.githubusercontent.com/u/6255363?v=4?s=100" width="100px;" alt="Andrei Tenescu"/><br /><sub><b>Andrei Tenescu</b></sub></a><br /><a href="#design-Tzeny" title="Design">🎨</a> <a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=Tzeny" title="Code">💻</a></td>
-      <td align="center"><a href="http://raghwendra-dey.github.io"><img src="https://avatars.githubusercontent.com/u/45457947?v=4?s=100" width="100px;" alt="Raghwendra Dey"/><br /><sub><b>Raghwendra Dey</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/issues?q=author%3ARaghwendra-Dey" title="Bug reports">🐛</a></td>
-    </tr>
-    <tr>
-      <td align="center"><a href="https://www.dsantini.it"><img src="https://avatars.githubusercontent.com/u/8406735?v=4?s=100" width="100px;" alt="Daniele Santini"/><br /><sub><b>Daniele Santini</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/issues?q=author%3ADanysan1" title="Bug reports">🐛</a></td>
-      <td align="center"><a href="http://chivaszx.netlify.app"><img src="https://avatars.githubusercontent.com/u/57280995?v=4?s=100" width="100px;" alt="Chivaszx"/><br /><sub><b>Chivaszx</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=aekkasit114" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/resynth1943"><img src="https://avatars.githubusercontent.com/u/49915996?v=4?s=100" width="100px;" alt="resynth1943"/><br /><sub><b>resynth1943</b></sub></a><br /><a href="#infra-resynth1943" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=resynth1943" title="Code">💻</a></td>
-      <td align="center"><a href="https://blakedrumm.com"><img src="https://avatars.githubusercontent.com/u/17127926?v=4?s=100" width="100px;" alt="Blake Drumm"/><br /><sub><b>Blake Drumm</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=x-limitless-x" title="Code">💻</a></td>
-      <td align="center"><a href="https://blakedrumm.com"><img src="https://avatars.githubusercontent.com/u/63755224?v=4?s=100" width="100px;" alt="Blake Drumm"/><br /><sub><b>Blake Drumm</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=blakedrumm" title="Documentation">📖</a></td>
-      <td align="center"><a href="https://ledmington.github.io"><img src="https://avatars.githubusercontent.com/u/68538713?v=4?s=100" width="100px;" alt="Filippo Barbari"/><br /><sub><b>Filippo Barbari</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=Ledmington" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/Apezdr"><img src="https://avatars.githubusercontent.com/u/2986979?v=4?s=100" width="100px;" alt="Adam Drumm"/><br /><sub><b>Adam Drumm</b></sub></a><br /><a href="https://github.com/sujaykundu777/devlopr-jekyll/commits?author=Apezdr" title="Documentation">📖</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
-
-- 1.Fork it [http://github.com/sujaykundu777/devlopr-jekyll/fork](http://github.com/sujaykundu777/devlopr-jekyll/fork )
-
-- 2.Create your feature branch
-`git checkout -b my-new-feature`
-
-- 3.Commit your changes
-`git commit -am 'Add some feature'`
-
-- 4.Push to the branch
-`git push origin my-new-feature`
-
-- 5.Create new Pull Request
-
-## Support this Project:
-
-Back this project by Donating to our [Open Collective](https://opencollective.com/devlopr-jekyll/donate) or if you like my work [Buymeacoffee](https://buymeacoffee.com/sujaykundu).
-
-Thanks to all our Backers ! [Become a Backer](https://opencollective.com/devlopr-jekyll/donate)
-
-<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/backers.svg?width=890" /></a>
-
-<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/tiers/backer.svg?avatarHeight=36" /></a>
-
-### For Help :
-
-You can contact me, if you need any help via [Email](mailto:sujaykundu777@gmail.com). If you like the project. Don't forget to :star: !
-
-## Licence
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/LICENSE) file
-
+Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/master/LICENSE) license.
