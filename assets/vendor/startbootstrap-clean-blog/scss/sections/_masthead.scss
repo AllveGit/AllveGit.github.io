@@ -31,7 +31,7 @@ header.masthead {
 
     .page-heading,
     .site-heading {
-        text-align: left;
+        text-align: center;
 
         h1 {
             font-size: 50px;
@@ -57,7 +57,7 @@ header.masthead {
 
     .post-heading {
         h1 {
-            font-size: 35px;
+            font-size: 28px;
         }
 
         .meta,
@@ -67,14 +67,14 @@ header.masthead {
         }
 
         .subheading {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
-            margin: 10px 0 30px;
+            margin: 20px 0 30px;
             font-family: $headings-font-family;
         }
 
         .meta {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 300;
             font-style: italic;
             font-family: $font-family-base;
@@ -84,13 +84,17 @@ header.masthead {
             }
         }
 
+        .icon {
+            font-size: 28px;
+        }
+
         @media only screen and (min-width: 768px) {
             h1 {
-                font-size: 55px;
+                font-size: 48px;
             }
 
             .subheading {
-                font-size: 30px;
+                font-size: 28px;
             }
         }
     }

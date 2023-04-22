@@ -1,23 +1,45 @@
 // Styling for the post page
+.post-recent-guide {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 15px;
+    color: $gray-800;
+}
+
+.post-recent-subguide {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 45px;
+    color: $gray-700;
+}
+
 .post-preview {
     >a {
-        color: $gray-900;
+        >.post-title {
+            font-size: 30px;
+            margin: 0 0 15px;
+            color: $gray-900;
+        }
+
+        >.post-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0 0 15px;
+            color: $gray-700;
+        }
+
+        >.post-category {
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: $gray-600;
+        }
 
         &:focus,
         &:hover {
             text-decoration: none;
             color: $primary;
-        }
-
-        >.post-title {
-            font-size: 30px;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-
-        >.post-subtitle {
-            font-weight: 300;
-            margin: 0 0 10px;
         }
     }
 
@@ -42,7 +64,7 @@
     @media only screen and (min-width: 768px) {
         >a {
             >.post-title {
-                font-size: 36px;
+                font-size: 30px;
             }
         }
     }

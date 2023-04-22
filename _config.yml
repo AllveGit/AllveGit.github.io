@@ -1,17 +1,17 @@
-title:              Allve's Tech Blog
+title:              Allve 기술 블로그
 email:              allvegamedevelop@gmail.com
 description:        시니어 프로그래머가 되기 위한 여정
 author:             Allve
 profile_name:       👨‍💻 이승재
-profile_introduce:  🌱 4년차 게임 프로그래머입니다.
+profile_introduce:  🌱 4년차 게임 개발자입니다.
 profile_bio:        온라인에서는 Allve라는 닉네임으로 활동중입니다.
 baseurl:            ""
 url:                ""
 
 # Social Profiles
-twitter_username:   SBootstrap
+twitter_username:   
 github_username:    AllveGit
-facebook_username:  StartBootstrap
+facebook_username:  
 instagram_username: allve_dev
 linkedin_username:
 
