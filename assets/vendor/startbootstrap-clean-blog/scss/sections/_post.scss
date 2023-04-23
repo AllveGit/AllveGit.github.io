@@ -1,4 +1,13 @@
 // Styling for the post page
+.post-content-paragraph {
+    >p {
+        margin: 30px 0px;
+        white-space: pre-wrap;
+        overflow: visible;
+        line-height: 2.0;
+    }
+}
+
 .post-recent-guide {
     font-size: 36px;
     text-align: center;

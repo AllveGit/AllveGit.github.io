@@ -53,9 +53,10 @@ h6, .h6 { @include font-size($h6-font-size); }
 //
 
 hr {
+  background: $gray-300;
   margin-top: $hr-margin-y;
   margin-bottom: $hr-margin-y;
-  border: 0;
+  border: 0px solid;
   border-top: $hr-border-width solid $hr-border-color;
 }
 

@@ -20,7 +20,8 @@ body {
 
 p {
     line-height: 1.5;
-    margin: 30px 0;
+    font-size: 18px;
+    margin: 30px 0px;
 
     a {
         text-decoration: underline;
@@ -46,8 +47,13 @@ a {
 }
 
 blockquote {
-    font-style: italic;
-    color: $gray-600;
+    background-color: $gray-300;
+    border-left: 0.5rem solid $gray-600;
+    margin:1.5rem 0.5rem;
+    padding: 1rem 1rem;
+    color: black;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 .section-heading {

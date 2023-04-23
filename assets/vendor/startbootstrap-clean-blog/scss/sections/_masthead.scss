@@ -60,6 +60,11 @@ header.masthead {
             font-size: 28px;
         }
 
+        p {
+            font-size: 18px;
+            margin: 10px 0px;
+        }
+
         .meta,
         .subheading {
             line-height: 1.1;
@@ -76,7 +81,6 @@ header.masthead {
         .meta {
             font-size: 18px;
             font-weight: 300;
-            font-style: italic;
             font-family: $font-family-base;
 
             a {
@@ -91,6 +95,10 @@ header.masthead {
         @media only screen and (min-width: 768px) {
             h1 {
                 font-size: 48px;
+            }
+
+            p {
+                font-size: 20px;
             }
 
             .subheading {
