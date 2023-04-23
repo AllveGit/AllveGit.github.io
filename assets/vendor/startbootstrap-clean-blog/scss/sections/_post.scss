@@ -1,5 +1,9 @@
 // Styling for the post page
 .post-content-paragraph {
+    >h2 {
+        color: $gray-900;
+    }
+
     >p {
         margin: 30px 0px;
         white-space: pre-wrap;

@@ -2,7 +2,7 @@
 layout: page
 title: Posts
 description: 전체 포스트 목록을 살펴보세요
-background: '/img/bg-post.jpg'
+background: '/assets/img/bg-post.jpg'
 ---
 
 {% for post in paginator.posts %}
@@ -41,12 +41,12 @@ background: '/img/bg-post.jpg'
 <div class="clearfix">
 
   {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+  <a class="btn btn-success float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
     Newer<span class="d-none d-md-inline"> Posts</span></a>
   {% endif %}
 
   {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+  <a class="btn btn-success float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
   {% endif %}
 
 </div>
