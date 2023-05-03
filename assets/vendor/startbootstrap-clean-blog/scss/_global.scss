@@ -26,6 +26,16 @@ p {
     a {
         text-decoration: underline;
     }
+
+    em {
+        font-size: 1.0rem;
+        font-style: italic;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        margin: auto;
+        word-break: keep-all;
+    }
 }
 
 h1,
@@ -54,6 +64,10 @@ blockquote {
     color: black;
     border-radius: 0.5rem;
     overflow: hidden;
+
+    li {
+        margin-top: 15px;
+    }
 }
 
 .section-heading {

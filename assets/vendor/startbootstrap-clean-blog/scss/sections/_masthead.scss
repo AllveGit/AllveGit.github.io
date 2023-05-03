@@ -34,7 +34,7 @@ header.masthead {
         text-align: center;
 
         h1 {
-            font-size: 50px;
+            font-size: 36px;
             margin-top: 0;
         }
 
@@ -50,19 +50,23 @@ header.masthead {
         @media only screen and (min-width: 768px) {
             h1 {
                 font-family: 'LINESeedKR-Bd', sans-serif;
-                font-size: 50px;
+                font-size: 60px;
             }
         }
     }
 
     .post-heading {
         h1 {
-            font-size: 28px;
+            font-size: 24px;
         }
 
         p {
-            font-size: 18px;
+            font-size: 14px;
             margin: 10px 0px;
+        }
+
+        .post-icon {
+            font-size: 50px;
         }
 
         .meta,
@@ -99,6 +103,10 @@ header.masthead {
 
             p {
                 font-size: 20px;
+            }
+
+            .post-icon {
+                font-size: 60px;
             }
 
             .subheading {

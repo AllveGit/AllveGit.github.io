@@ -14,7 +14,9 @@ layout: default
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
             {% if page.icon %}
-            <h1>{{ page.icon }}</h1>
+            <div class="post-icon">
+              {{ page.icon }}
+            </div>
             {% endif %}
 
             {% if page.category %}

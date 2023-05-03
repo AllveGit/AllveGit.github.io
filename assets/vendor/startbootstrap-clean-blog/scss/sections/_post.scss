@@ -2,6 +2,7 @@
 .post-content-paragraph {
     >h2 {
         color: $gray-900;
+        font-size: 28px;
     }
 
     >p {
@@ -9,6 +10,61 @@
         white-space: pre-wrap;
         overflow: visible;
         line-height: 2.0;
+        font-size: 14px;
+    }
+
+    >blockquote {
+        background-color: $gray-300;
+        border-left: 0.5rem solid $gray-600;
+        margin:0.25rem 0.25rem;
+        padding: 1rem 1rem;
+        color: black;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    
+        li {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        >p {
+            font-size: 18px;
+        }
+
+        >blockquote {
+            background-color: $gray-300;
+            border-left: 0.5rem solid $gray-600;
+            margin:1.5rem 0.5rem;
+            padding: 1rem 1rem;
+            color: black;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        
+            >li {
+                margin-top: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.post-image-section {
+    text-align: center;
+
+    >p {
+        >em {
+            font-size: 12px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        >p {
+            >em {
+                font-size: 16px;
+            }
+        }
     }
 }
 
@@ -29,13 +85,13 @@
 .post-preview {
     >a {
         >.post-title {
-            font-size: 30px;
+            font-size: 24px;
             margin: 0 0 15px;
             color: $gray-900;
         }
 
         >.post-subtitle {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
             margin: 0 0 15px;
             color: $gray-700;
@@ -57,7 +113,7 @@
     }
 
     >.post-meta {
-        font-size: 18px;
+        font-size: 16px;
         font-style: italic;
         margin-top: 0;
         color: $gray-600;
@@ -78,6 +134,45 @@
         >a {
             >.post-title {
                 font-size: 30px;
+            }
+
+            >.post-subtitle {
+                font-size: 20px;
+                font-weight: 300;
+                margin: 0 0 15px;
+                color: $gray-700;
+            }
+    
+            >.post-category {
+                font-size: 18px;
+                font-weight: 300;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                color: $gray-600;
+            }
+    
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                color: $primary;
+            }
+        }
+    
+        >.post-meta {
+            font-size: 18px;
+            font-style: italic;
+            margin-top: 0;
+            color: $gray-600;
+    
+            >a {
+                text-decoration: none;
+                color: $gray-900;
+    
+                &:focus,
+                &:hover {
+                    text-decoration: underline;
+                    color: $primary;
+                }
             }
         }
     }
