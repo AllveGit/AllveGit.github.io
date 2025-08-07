@@ -4,11 +4,16 @@ icon: fas fa-info-circle
 order: 4
 ---
 
+- **OmniCraft Labs**  
+    (2025 ~ Current)  
+    > ![career-3](/posts/career-3.jpg){: .w-25 .shadow .rounded-10 .normal w='240' h='240'}  
+    🎮 **『 신규프로젝트 』**  
+    개발 (Software Engineer)
 - **Netmarble Nexus**  
-    (2023 ~ )  
+    (2023 ~ 2025)  
     > ![career-2](/posts/career-2.jpg){: .w-25 .shadow .rounded-10 .normal w='240' h='240'}  
     🎮 **『 프로젝트WE 』**  
-    개발 (클라이언트 프로그래머)
+    개발 (Software Engineer)
 
 - **Factorial Games**  
     (2019 ~ 2023)
